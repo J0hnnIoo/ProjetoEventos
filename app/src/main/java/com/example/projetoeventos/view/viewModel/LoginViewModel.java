@@ -36,6 +36,7 @@ public class LoginViewModel extends ViewModel {
                     mUsuarioLogado.postValue(usuario);
                 } else {
                     mUsuarioLogado.postValue(null);
+                    //teste
                 }
             }
             @Override
