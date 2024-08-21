@@ -1,13 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragments.CadastroUsuarioFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="CADASTRAR"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvCadastroUsuarioNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="216dp"
+        android:text="Nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCadastroUsuarioNome"
+        android:layout_width="366dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroUsuarioNome" />
+
+    <TextView
+        android:id="@+id/tvcadastroUsuarioEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroUsuarioNome" />
+
+    <EditText
+        android:id="@+id/etCadastroUsuarioEmail"
+        android:layout_width="366dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcadastroUsuarioEmail" />
+
+    <TextView
+        android:id="@+id/tvCadastroUsuarioLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCadastroUsuarioEmail" />
+
+    <EditText
+        android:id="@+id/etCadastroUsuaroLogin"
+        android:layout_width="366dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroUsuarioLogin" />
+
+    <TextView
+        android:id="@+id/tvCadastroUsuarioSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Senha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroUsuaroLogin" />
+    <EditText
+        android:id="@+id/etCadastroUsuairoSenha"
+        android:layout_width="366dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_background"
+        app:layout_constraintTop_toBottomOf="@+id/tvCadastroUsuarioSenha"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:textColor="@android:color/white"
+        android:background="@color/purple_700"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/etCadastroUsuairoSenha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginCadastrar"
+        android:text="Já possui conta? Clique aqui para entrar"
+        android:textColor="@color/purple_700"
+        android:layout_marginTop="20px"
+        app:layout_constraintTop_toBottomOf="@id/btCadastro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
