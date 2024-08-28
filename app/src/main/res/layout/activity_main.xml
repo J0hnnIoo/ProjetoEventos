@@ -6,11 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".view.activities.MainActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.projetoEventos.AppBarOverlay"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.projetoEventos.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottomNavigation"
         android:layout_gravity="bottom|end"
-        app:menu="@menu/menu_bottom_navigation"/>
+        app:menu="@menu/menu_bottom_navigation"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

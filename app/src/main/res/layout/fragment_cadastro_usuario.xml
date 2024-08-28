@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@id/etCadastroUsuarioEmail" />
 
     <EditText
-        android:id="@+id/etCadastroUsuaroLogin"
+        android:id="@+id/etCadastroUsuarioLogin"
         android:layout_width="366dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -84,9 +84,9 @@
         android:layout_marginTop="8dp"
         android:text="Senha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCadastroUsuaroLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/etCadastroUsuarioLogin" />
     <EditText
-        android:id="@+id/etCadastroUsuairoSenha"
+        android:id="@+id/etCadastroUsuarioSenha"
         android:layout_width="366dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
@@ -102,7 +102,7 @@
         android:textColor="@android:color/white"
         android:background="@color/purple_700"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/etCadastroUsuairoSenha"
+        app:layout_constraintTop_toBottomOf="@id/etCadastroUsuarioSenha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"

@@ -9,7 +9,14 @@
         android:id="@+id/loginFragment"
         android:name="com.example.projetoeventos.view.fragments.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/acao_login_to_visualizaEventos_fragment"
+            app:destination="@id/visualizaEventosFragment" />
+        <action
+            android:id="@+id/acao_login_to_cadastroUsuario_fragment"
+            app:destination="@id/cadastroUsuarioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cadastroUsuarioFragment"
         android:name="com.example.projetoeventos.view.fragments.CadastroUsuarioFragment"
@@ -19,15 +26,28 @@
         android:id="@+id/visualizaEventosFragment"
         android:name="com.example.projetoeventos.view.fragments.VisualizaEventosFragment"
         android:label="fragment_visualiza_eventos"
-        tools:layout="@layout/fragment_visualiza_eventos" />
+        tools:layout="@layout/fragment_visualiza_eventos" >
+        <action
+            android:id="@+id/acao_visualizaEventos_to_cadastraNoEvento_fragment"
+            app:destination="@id/cadastraNoEventoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/visualizaEventosInscritosFragment"
         android:name="com.example.projetoeventos.view.fragments.VisualizaEventosInscritosFragment"
         android:label="fragment_visualiza_eventos_inscritos"
-        tools:layout="@layout/fragment_visualiza_eventos_inscritos" />
+        tools:layout="@layout/fragment_visualiza_eventos_inscritos" >
+        <action
+            android:id="@+id/acao_visualizaEventosInscritos_to_eventoInscrito_fragment"
+            app:destination="@id/eventoInscritoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cadastraNoEventoFragment"
         android:name="com.example.projetoeventos.view.fragments.CadastraNoEventoFragment"
         android:label="fragment_cadastra_no_evento"
         tools:layout="@layout/fragment_cadastra_no_evento" />
+    <fragment
+        android:id="@+id/eventoInscritoFragment"
+        android:name="com.example.projetoeventos.view.fragments.eventoInscritoFragment"
+        android:label="fragment_evento_inscrito"
+        tools:layout="@layout/fragment_evento_inscrito" />
 </navigation>
