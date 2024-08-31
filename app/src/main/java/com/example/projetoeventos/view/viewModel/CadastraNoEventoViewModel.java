@@ -15,24 +15,17 @@ import retrofit2.Response;
 
 public class CadastraNoEventoViewModel extends ViewModel {
     private ParticipacoesRepository participacoesRepository;
-    private MutableLiveData<Evento> eventoInscrito;
-    private MutableLiveData<List<Participacoes>> mListaParticipacoes;
+    private MutableLiveData<Boolean> mResultadoOperacao;
 
     public CadastraNoEventoViewModel() {
         this.participacoesRepository = new ParticipacoesRepository();
-        this.eventoInscrito = new MutableLiveData<>();
-        this.mListaParticipacoes = new MutableLiveData<>();
+        this.mResultadoOperacao = new MutableLiveData<>();
     }
 
-    public void setEventoInscrito(Evento evento) {
-        this.eventoInscrito.setValue(evento);
+    public MutableLiveData<Boolean> getmResultadoOperacao() {
+        return mResultadoOperacao;
     }
 
-    public MutableLiveData<List<Participacoes>> getmListaParticipacoes() {
-        return mListaParticipacoes;
-    }
-
-    /*
     public void cadastrarNoEvento(Participacoes participacao) {
         this.participacoesRepository.cadastrarNoEvento(participacao, new Callback<Participacoes>() {
             @Override
@@ -51,8 +44,28 @@ public class CadastraNoEventoViewModel extends ViewModel {
             }
         });
     }
-   */
-    public void obtemListaPEventosCadastrados() {
+
+    public void sairDoEvento(Participacoes participacao) {
+        this.participacoesRepository.sairDoEvento(participacao, new Callback<Participacoes>() {
+            @Override
+            public void onResponse(Call<Participacoes> call, Response<Participacoes> response) {
+                Participacoes participacao = response.body();
+                if (participacao.getId() > 0) {
+                    mResultadoOperacao.postValue(true);
+                } else {
+                    mResultadoOperacao.postValue(false);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Participacoes> call, Throwable t) {
+                mResultadoOperacao.postValue(false);
+            }
+        });
+    }
+
+    /*
+        public void obtemListaPEventosCadastrados() {
         this.participacoesRepository.listarEventosCadastrados(new Callback<List<Participacoes>>() {
             @Override
             public void onResponse(Call<List<Participacoes>> call, Response<List<Participacoes>> response) {
@@ -65,4 +78,6 @@ public class CadastraNoEventoViewModel extends ViewModel {
             }
         });
     }
+     */
+
 }

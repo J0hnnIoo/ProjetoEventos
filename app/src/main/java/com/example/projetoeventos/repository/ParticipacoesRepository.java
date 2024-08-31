@@ -18,4 +18,8 @@ public class ParticipacoesRepository {
     public void listarEventosCadastrados(Callback<List<Participacoes>> callback) {
         participacoesService.listarEventosInscritos().enqueue(callback);
     }
+
+    public void sairDoEvento(Participacoes participacao, Callback<Participacoes> callback) {
+        participacoesService.sairDoEvento(participacao).enqueue(callback);
+    }
 }

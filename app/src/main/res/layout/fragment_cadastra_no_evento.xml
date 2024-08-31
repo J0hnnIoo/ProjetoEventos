@@ -33,18 +33,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvNomeEvento" />
 
     <TextView
-        android:id="@+id/tvHorarioEvento"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Horário:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDataEvento" />
-
-    <TextView
         android:id="@+id/tvLocalEvento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -54,7 +42,7 @@
         android:text="Local:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioEvento" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDataEvento" />
 
     <TextView
         android:id="@+id/tvDescricaoEvento"
@@ -69,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvLocalEvento" />
 
     <Button
-        android:id="@+id/inscrever_se_button"
+        android:id="@+id/btInscreverOuDeletar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

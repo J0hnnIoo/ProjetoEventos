@@ -7,8 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ClienteRetrofit {
     public static Retrofit getInstance() {
-        String ip = "";
-        String urlWebService = "http://" + ip + "";
+        String ip = "192.168.4.122";
+        String urlWebService = "http://" + ip + "/";
 
 
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();

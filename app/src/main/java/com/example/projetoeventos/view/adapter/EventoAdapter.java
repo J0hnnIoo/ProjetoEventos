@@ -15,7 +15,12 @@ import java.util.List;
 public class EventoAdapter extends RecyclerView.Adapter<EventoAdapter.MyViewHolder> {
     private List<Evento> listaEventos;
 
-    private EventoAdapter.EventoOnClickListener eventoOnClickListener;
+    private EventoAdapter.EventoOnClickListener EventoOnClickListener;
+
+    public EventoAdapter(List<Evento> listaEventos, EventoAdapter.EventoOnClickListener EventoOnClickListener) {
+        this.listaEventos = listaEventos;
+        this.EventoOnClickListener = EventoOnClickListener;
+    }
 
     @NonNull
     @Override
@@ -29,9 +34,9 @@ public class EventoAdapter extends RecyclerView.Adapter<EventoAdapter.MyViewHold
         Evento evento = listaEventos.get(position);
         holder.itemListRowBinding.tvItemNome.setText(evento.getTitulo());
 
-        if (eventoOnClickListener != null) {
+        if (EventoOnClickListener != null) {
             holder.itemListRowBinding.getRoot().setOnClickListener(view -> {
-                eventoOnClickListener.onClickEvento(holder.itemView, position, evento);
+                EventoOnClickListener.onClickEvento(holder.itemView, position, evento);
             });
         }
     }

@@ -7,9 +7,9 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface UsuarioService {
-    @POST("usuarios/inserirUsuario.php")
+    @POST("eventosWeb/API/usuario/inserirUsuario")
     Call<Usuario> inserirUsuario(@Body Usuario usuario);
 
-    @POST("usuarios/autenticarUsuario.php")
+    @POST("eventosWeb/API/usuario/autenticarUsuario")
     Call<Usuario> autenticarUsuario(@Body Usuario usuario);
 }
